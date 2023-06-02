@@ -1,47 +1,29 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-
+import { ImageBackground } from 'react-native';
 import Colors from '../constants/Colors';
 import { ExternalLink } from './ExternalLink';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
+import LoginCard from './LoginCard';
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
-    <View>
-      <View style={styles.getStartedContainer}>
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Open up the code for this screen:
-        </Text>
 
-        <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)">
-          <MonoText>{path}</MonoText>
-        </View>
-
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Change any of the text, save the file, and your app will automatically update.
-        </Text>
-      </View>
-
-      <View style={styles.helpContainer}>
-        <ExternalLink
-          style={styles.helpLink}
-          href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
-          <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
+      <ImageBackground source={require('../assets/images/splash.png')} style={{width: '100%', height: '100%'}}>
+            <View
+              style={styles.LoginCard}
+            >
+              <LoginCard/>
+            </View>
+          <Text
+            style={styles.getStartedText}
+            lightColor="rgba(0,0,0,0.8)"
+            darkColor="rgba(255,255,255,0.8)">
           </Text>
-        </ExternalLink>
-      </View>
-    </View>
+
+      </ImageBackground>
+
   );
 }
 
@@ -73,4 +55,13 @@ const styles = StyleSheet.create({
   helpLinkText: {
     textAlign: 'center',
   },
+  LoginCard: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 50,  // Menor margin
+    marginVertical: 170,  // Menor margin
+    backgroundColor: 'rgba(56, 20, 0, 0.55)',
+    borderRadius: 10,
+},
 });
