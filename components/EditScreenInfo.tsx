@@ -10,10 +10,8 @@ import LoginCard from './LoginCard';
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
 
-      <ImageBackground source={require('../assets/images/splash.png')} style={{width: '100%', height: '100%'}}>
-            <View
-              style={styles.LoginCard}
-            >
+      <ImageBackground source={require('../assets/images/splash.png')} style={{width: '100%', height: '100%'}} blurRadius={5}>
+            <View style={styles.LoginCard}>
               <LoginCard/>
             </View>
           <Text
@@ -21,7 +19,6 @@ export default function EditScreenInfo({ path }: { path: string }) {
             lightColor="rgba(0,0,0,0.8)"
             darkColor="rgba(255,255,255,0.8)">
           </Text>
-
       </ImageBackground>
 
   );

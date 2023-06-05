@@ -2,9 +2,16 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, TextInput, ImageBackground } from 'react-native';
 import Checkbox from 'expo-checkbox';
 import Colors from '../constants/Colors';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginCard: React.FC = () => {
     const [isChecked, setIsChecked] = useState(false)
+    const navigation = useNavigation();
+
+    const redirectToRegisterUser = () => {
+        // add to navigation stack the RegisterUser component
+        // navigation.navigate('RegisterUser'); // RegisterUser is the name of the component
+    }
 
   return (
   <>
@@ -45,8 +52,9 @@ const LoginCard: React.FC = () => {
             
             <View style={styles.secondaryItens}>
                <Text style={styles.checkboxTitle}> Não possui conta? </Text>
-               <Text style={styles.forgotPassword }>
-                    Manter conectado
+               <Text style={styles.forgotPassword } onPress={redirectToRegisterUser}
+               >
+                    Cadastre-se
                 </Text>
             </View>
         </View>

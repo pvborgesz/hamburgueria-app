@@ -2,6 +2,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
+import React from 'react';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 
@@ -47,6 +48,7 @@ function RootLayoutNav() {
           <Stack.Screen name="404" options={{ title: 'Not Found' }} />
           {/* i wanna put loginScreen */}
           <Stack.Screen name="login" options={{ title: 'Login' }} />
+          <Stack.Screen name="RegisterUser" options={{ title: 'Register' }} />
         </Stack>
       </ThemeProvider>
     </>

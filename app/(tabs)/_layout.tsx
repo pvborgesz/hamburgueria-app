@@ -1,12 +1,17 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
 import Colors from '../../constants/Colors';
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
+
+const Tab = createBottomTabNavigator();
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
