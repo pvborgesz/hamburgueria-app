@@ -7,17 +7,8 @@ import RegisterUserCard from '../../components/RegisterUserCard';
 
 
 export default function TabTwoScreen() {
-  // return (
-  //   <View style={styles.container}>
-  //     <View>
-  //     <RegisterUserCard/>
-  //     {/* <EditScreenInfo path="app/(tabs)/two.tsx" /> */}
-  //     </View>
-  //   </View>
-  // );
   return (
     <View style={styles.container}>
-      {/* <EditScreenInfo path="app/(tabs)/index.tsx" /> */}
         <RegisterUserCard/>
     </View>
   );

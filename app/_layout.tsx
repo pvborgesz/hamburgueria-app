@@ -46,9 +46,9 @@ function RootLayoutNav() {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
           <Stack.Screen name="404" options={{ title: 'Not Found' }} />
-          {/* i wanna put loginScreen */}
+
           <Stack.Screen name="login" options={{ title: 'Login' }} />
-          <Stack.Screen name="RegisterUser" options={{ title: 'Register' }} />
+          <Stack.Screen name="forgotPassword" options={{ title: 'forgotPassword' }} />
         </Stack>
       </ThemeProvider>
     </>
